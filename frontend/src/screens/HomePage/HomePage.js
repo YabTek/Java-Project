@@ -1,13 +1,20 @@
 import React from 'react'
 import './HomePage.css'
 import Header from '../../components/Header/Header'
+import LandingPage from '../../components/LandingPage/LandingPage'
+import MovieList from '../../components/MovieList/MovieList'
 
 
 const HomePage = () => {
   return (
     <div className = "home-main">
       <Header/>
-      <img src = {require('../../images/bg.png')} alt = "" width = "100%"/>
+      <LandingPage/>
+      <MovieList/>
+      <MovieList/>
+      <MovieList/>
+      <MovieList/>
+
     </div>
   )
 }

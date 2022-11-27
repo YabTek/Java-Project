@@ -8,19 +8,22 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 const Header = () => {
   return (
     <div className = "header-main">
-      <Container className="header" style = {{justifyContent:"space-between"}}>
+      <Container className="header">
         <div>
           <img src = {require('../../images/logo.png')} className = "logo" alt = ""
           />
-          <span>home</span>
-          <span>series</span>
-          <span>movies</span>
-          <span>new and popular</span>
-          <span>my list</span>
+          <span>Home</span>
+          <span>Tv shows</span>
+          <span>Movies</span>
+          <span>Latest</span>
+          <span>My list</span>
+          <span>Audio and subtitles</span>
+
         </div>
         <div className = "icons"> 
           <SearchIcon className='icon'/>
           <span>KID</span>
+          <span>DVD</span>
           <NotificationsNoneIcon className='icon'/>
           <img src = {require('../../images/pic.png')} className = "profile-pic" alt = ""/>
           <NavDropdown title="" id="basic-nav-dropdown" >

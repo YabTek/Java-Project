@@ -1,0 +1,21 @@
+.movie-list {
+    margin-top: 10px;
+
+    
+
+}
+.description {
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 40px;
+}
+.container {
+    margin-left: 30px;
+    display: flex;
+    width: max-content
+}
+.forward-icon {
+    position: absolute;
+    right: 0;
+}
