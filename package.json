@@ -16,5 +16,14 @@
   "bugs": {
     "url": "https://github.com/YabTek/NetflixClone-MERNSTACK/issues"
   },
-  "homepage": "https://github.com/YabTek/NetflixClone-MERNSTACK#readme"
+  "homepage": "https://github.com/YabTek/NetflixClone-MERNSTACK#readme",
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.7.3",
+    "nodemon": "^2.0.20"
+  }
 }
