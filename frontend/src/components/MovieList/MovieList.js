@@ -10,19 +10,16 @@ const MovieList = () => {
 
     <div className = "movie-list">
       <span className = "description">violent suspenseful tv shows</span>
-       <div className = "holder">
-       <div className='container'>
+       <div className='holder'>
         <Movies/>
         <Movies/>
         <Movies/>
-        <Movies/>       
-         <Movies/>
-         <Movies/>
-         <Movies/>
-         
+        <Movies/>
+
+        <Movies/>
+
+       
        </div>
-       </div>
-    
     </div>
   )
 }

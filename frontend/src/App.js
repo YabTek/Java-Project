@@ -6,9 +6,9 @@ import LoginPage from './screens/LoginPage/LoginPage';
 function App() {
   return (
     <>
-    {/* <HomePage/> */}
+    <HomePage/> 
     {/* <RegisterPage/> */}
-    <LoginPage/>
+    {/* <LoginPage/> */}
     </>
   );
 }
