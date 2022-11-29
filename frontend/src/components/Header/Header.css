@@ -2,8 +2,8 @@
     color:white;
     height: 72px;
     display:flex;
-    position: fixed;
     width:100%;
+    position: fixed;
 }
 .logo {
     width:100px;
@@ -14,16 +14,12 @@
     border-radius: 50%;
 }
 .header {
-    display: flex;
     align-items:flex-end;
 }
 .header span{
-    padding-left: 18px;
+    padding-left: 10px;
 }
 .icons {
     display: flex;
-}
-.icon {
-    margin: 0px 15px;
-
+    margin-left: 400px;
 }
