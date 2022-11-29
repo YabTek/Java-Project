@@ -1,4 +1,8 @@
 const User = require('../models/userModel')
+const asyncHandler = require('express-async-handler');
+const generateToken = require('../utils/generateToken');
+
+
 
 const registerUser = async(req,res) => {
    const {username,email,password} = req.body
@@ -9,7 +13,8 @@ const registerUser = async(req,res) => {
       res.json({
        usename : user.username,
        email: user.email,
-       
+       _id: user._id,
+
    
       })
    }
@@ -19,4 +24,22 @@ const registerUser = async(req,res) => {
    
 }
 
-module.exports = registerUser
+const logUser = asyncHandler(async(req,res) => {
+   const {email,password} = req.body
+   const user = await User.findOne({email})
+
+  if (user && (await user.matchPassword(password))){
+   res.json({
+       username: user.username,
+       email: user.email,
+       _id : user._id,
+
+   })
+  }
+  else{
+   res.sendStatus(400);
+   throw new Error('Invalid email or password');
+}
+})
+
+module.exports = {registerUser,logUser}
