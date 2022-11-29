@@ -1,23 +1,24 @@
 const User = require('../models/userModel')
-const asyncHandler = require('express-async-handler');
 
 
-const getUser = asyncHandler(async(req,res)=>{
-    User.find((error, user) => {
+const getUser = (req,res)=>{
+     User.find((error, user) => {
         if (error) {
           return next(error)
         } else {
           res.json(user)
         }
       })
-});
-const getUserById = asyncHandler(async(req,res)=>{
+};
+
+const getUserById =(req,res)=>{
     const id = req.params.id;
     User.findById(id, function (error, user) {
         res.json(user)
     });
-})
-const updateUser =  asyncHandler(async(req,res) =>{
+};
+
+const updateUser =  (req,res) =>{
         User.findById(req.params.id, function (err, user) {
         if (!user){
             throw new Error('No user with this id')
@@ -35,8 +36,9 @@ const updateUser =  asyncHandler(async(req,res) =>{
         });
         }
         });
-})
-const deleteUser = asyncHandler(async(req,res) =>{
+};
+
+const deleteUser = (req,res) =>{
         User.findByIdAndRemove({ _id: req.params.id }, 
         function (err, user) {
         if (err) {
@@ -46,6 +48,6 @@ const deleteUser = asyncHandler(async(req,res) =>{
             res.json('user deleted successfully');
         }    
         });
-})
+};
 
 module.exports = {updateUser,getUser,getUserById,deleteUser}
