@@ -15,11 +15,12 @@ mongoose.connect("mongodb://127.0.0.1/netflix")
 
 app.use('/api/users',authRoute)
 app.use('/api/users',userRoute)
+
 app.get('/',(req,res)=>{
     res.end('hello world');
 })
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log('server running on port 5000')
 })
 

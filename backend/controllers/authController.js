@@ -4,7 +4,7 @@ const generateToken = require('../utils/generateToken');
 
 
 
-const registerUser = async(req,res) => {
+const registerUser = asyncHandler(async(req,res) => {
    const {username,email,password} = req.body
    const newUser = await new User({username,email,password})
 
@@ -14,6 +14,8 @@ const registerUser = async(req,res) => {
        usename : user.username,
        email: user.email,
        _id: user._id,
+       token: generateToken(user._id)
+
 
    
       })
@@ -22,7 +24,7 @@ const registerUser = async(req,res) => {
       throw new Error('error occured')
    }
    
-}
+});
 
 const logUser = asyncHandler(async(req,res) => {
    const {email,password} = req.body
@@ -33,6 +35,7 @@ const logUser = asyncHandler(async(req,res) => {
        username: user.username,
        email: user.email,
        _id : user._id,
+       token: generateToken(user._id)
 
    })
   }

@@ -3,12 +3,20 @@ import './bootstrap.min.css';
 import HomePage from './screens/HomePage/HomePage';
 import RegisterPage from './screens/signupPage/RegisterPage';
 import LoginPage from './screens/LoginPage/LoginPage';
+import {Routes,Route,BrowserRouter} from 'react-router-dom'
+
+
 function App() {
   return (
     <>
-    <HomePage/> 
-    {/* <RegisterPage/> */}
-    {/* <LoginPage/> */}
+     <BrowserRouter>
+     <Routes>
+       <Route path = "/home" element= {<HomePage/>}/>
+       <Route path = "/login" element= {<LoginPage/>}/>
+       <Route path = "/" element= {<RegisterPage/>}/>
+     </Routes>
+     </BrowserRouter>
+    
     </>
   );
 }

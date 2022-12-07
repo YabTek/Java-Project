@@ -14,5 +14,7 @@ router.route('/:id').put(updateUser)
 //delete
 router.route('/:id').delete(deleteUser)
 
+//get user stats
+
 
 module.exports = router
