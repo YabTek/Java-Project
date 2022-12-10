@@ -9,12 +9,11 @@ const movielistSchema = new mongoose.Schema({
     type : {
         type: String,
      },
-     content : {
+    content : {
         type: Array,
      },
-     isSeries : {
-        type: Boolean,
-        default: false
+    genre : {
+      type: String
      },
     },
     {
@@ -22,5 +21,5 @@ const movielistSchema = new mongoose.Schema({
     }
 )
 
-const Movielist = mongoose.model('list',movielistSchema)
+const Movielist = mongoose.model('movielist',movielistSchema)
 module.exports = Movielist

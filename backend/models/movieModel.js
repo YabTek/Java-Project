@@ -28,6 +28,15 @@ const movieSchema = new mongoose.Schema({
         type: Boolean,
         default: false
      },
+     year: {
+       type: String 
+      },
+     limit: { 
+      type: Number 
+   },
+     genre: { 
+      type: String 
+   },
     },
     {
         timestamps: true
