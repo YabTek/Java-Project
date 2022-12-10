@@ -4,20 +4,13 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Movies from '../Movies/Movies';
 
-const MovieList = () => {
+const MovieList = ({movie}) => {
   return (
-  
-
     <div className = "movie-list">
-      <span className = "description">violent suspenseful tv shows</span>
+      <span className = "description">{movie.title}</span>
        <div className='holder'>
-        <Movies/>
-        <Movies/>
-        <Movies/>
-        <Movies/>
-
-        <Movies/>
-
+        {movie.content.map((film) => (<Movies film = {film}/>
+))}
        
        </div>
     </div>
